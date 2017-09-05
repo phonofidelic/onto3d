@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class ControllGroup extends Component {
+class ControlGroup extends Component {
 	render() {
-		const { shape, dimention, dimentionName, controllTypeName, handleShapeChange } = this.props;
+		const { shape, dimention, dimentionName, controlTypeName, handleShapeChange } = this.props;
 		return (
 			<div className='controll-group'>
 				<button type="button" 
@@ -11,7 +11,7 @@ class ControllGroup extends Component {
 									handleShapeChange({
 										id: shape.id, 
 										direction: 'dec', 
-										controllTypeName: controllTypeName, 
+										controlTypeName: controlTypeName, 
 										dimentionName: dimentionName
 									})
 								}}> -
@@ -25,7 +25,7 @@ class ControllGroup extends Component {
 									handleShapeChange({
 										id: shape.id, 
 										direction: 'inc', 
-										controllTypeName: controllTypeName, 
+										controlTypeName: controlTypeName, 
 										dimentionName: dimentionName
 									})
 								}}> +
@@ -35,4 +35,4 @@ class ControllGroup extends Component {
 	}
 }
 
-export default ControllGroup;
+export default ControlGroup;

@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import ControllGroupContainer from './ControllGroupContainer';
+import ControlGroupContainer from './ControlGroupContainer';
 
-class ShapeControll extends Component {
+class ShapeControl extends Component {
 
-	// handleShapeChange(direction, controllTypeName, dimentionName) {
-	// 	console.log('*** handleShapeChange:', direction, controllTypeName, dimentionName)
+	// handleShapeChange(direction, controlTypeName, dimentionName) {
+	// 	console.log('*** handleShapeChange:', direction, controlTypeName, dimentionName)
 	// }
 
 	render() {
 		const { shape } = this.props;
 		return (
 			<div className="shape-controll row">
-				<ControllGroupContainer controllTypeName="Position" 
-																controllType={shape.position}
+				<ControlGroupContainer controlTypeName="Position" 
+																controlType={shape.position}
 																shape={shape}
 																handleShapeChange={this.props.handleShapeChange} />
 
-				<ControllGroupContainer controllTypeName="Rotation" 
-																controllType={shape.rotation}
+				<ControlGroupContainer controlTypeName="Rotation" 
+																controlType={shape.rotation}
 																shape={shape}
 																handleShapeChange={this.props.handleShapeChange} />
 
-				<ControllGroupContainer controllTypeName="Scale" 
-																controllType={shape.scale}
+				<ControlGroupContainer controlTypeName="Scale" 
+																controlType={shape.scale}
 																shape={shape}
 																handleShapeChange={this.props.handleShapeChange} />
 			</div>
@@ -38,4 +38,4 @@ const mapStateToProps = state => {
 	}
 }
 
-export default ShapeControll;
+export default ShapeControl;

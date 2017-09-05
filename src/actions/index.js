@@ -19,19 +19,19 @@ export const updateValue = (data) => {
 	/*
 	data: {
 		direction: 'inc' || 'dec',
-		controllTypeName: 'Position' || 'Rotation' || 'Scale',
+		controlTypeName: 'Position' || 'Rotation' || 'Scale',
 		dimentionName: 'x' || 'y' || 'z'
 	}
 	*/
 	log('@ updateValue, \n    id:', data.id,
 											'\n    direction:', data.direction, 
-											'\n    controllTypeName:', data.controllTypeName, 
+											'\n    controlTypeName:', data.controlTypeName, 
 											'\n    dimention:', data.dimentionName
 	);
 
 	return dispatch => {
 
-		switch(data.controllTypeName) {
+		switch(data.controlTypeName) {
 			case 'Position':
 				dispatch({
 					type: UPDATE_POSITION,
