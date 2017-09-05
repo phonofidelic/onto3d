@@ -1,0 +1,63 @@
+import { INIT_APP, 
+				 UPDATE_VALUE,
+				 UPDATE_POSITION,
+				 UPDATE_ROTATION,
+				 UPDATE_SCALE } from '../actiontypes';
+
+const log = console.log;
+
+export const init = () => {
+	log('@ init is called')
+	return dispatch => {
+		dispatch({
+			type: INIT_APP
+		})
+	}
+}
+
+export const updateValue = (data) => {
+	/*
+	data: {
+		direction: 'inc' || 'dec',
+		controllTypeName: 'Position' || 'Rotation' || 'Scale',
+		dimentionName: 'x' || 'y' || 'z'
+	}
+	*/
+	log('@ updateValue, \n    id:', data.id,
+											'\n    direction:', data.direction, 
+											'\n    controllTypeName:', data.controllTypeName, 
+											'\n    dimention:', data.dimentionName
+	);
+
+	return dispatch => {
+
+		switch(data.controllTypeName) {
+			case 'Position':
+				dispatch({
+					type: UPDATE_POSITION,
+					id: data.id,
+					direction: data.direction,
+					dimention: data.dimentionName
+				})
+				return;
+
+			case 'Rotation':
+				dispatch({
+					type: UPDATE_ROTATION,
+					id: data.id,
+					direction: data.direction,
+					dimention: data.dimentionName
+				})
+				return;
+
+			case 'Scale':
+				dispatch({
+					type: UPDATE_SCALE,
+					id: data.id,
+					direction: data.direction,
+					dimention: data.dimentionName
+				})
+				return;
+		}
+	}
+}

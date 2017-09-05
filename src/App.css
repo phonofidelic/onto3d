@@ -1,5 +1,73 @@
+.btn {
+	border: none;
+}
+
+.App {
+	background: #727272;
+}
+
+.scene-container{
+	/*z-index: -1;*/
+}
+
 .a-enter-vr-button {
   position: absolute;
   top: 35px;
   right: 0px;
 }
+
+.controlls-container {
+	background: #727272;
+	/*z-index: 1000;*/
+	padding: 10px;
+}
+
+.controll-group {
+	/*height: 20px;*/
+	background: #b2b2b2;
+	border-radius: 4px;
+	
+}
+
+
+.controll-group:nth-child(2n) {
+	border-top: 1px solid #727272;
+	border-bottom: 1px solid #727272;
+}
+
+.controll-group:nth-child(2n) button {
+	border-radius: 0;
+}
+
+/* Shape controll button radius */
+.controll-group:first-child button.btn-decrement {
+	border-radius: 4px 0px 0px 0px;
+}
+.controll-group:first-child button.btn-increment {
+	border-radius: 0px 4px 0px 0px;
+}
+.controll-group:last-child button.btn-decrement {
+	border-radius: 0px 0px 0px 4px;
+}
+.controll-group:last-child button.btn-increment {
+	border-radius: 0px 0px 4px 0px;
+}
+
+.shape-controll-value {
+	width: 50px;
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.btn-increment {
+	float: right;
+	border-radius: 0px 4px 4px 0px;
+}
+
+.btn-decrement {
+	border-radius: 4px 0px 0px 4px; 
+}
+
+
+
