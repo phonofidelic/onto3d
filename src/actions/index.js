@@ -1,10 +1,18 @@
-import { UPDATE_POSITION,
+import { ENTER_VR,
+				 UPDATE_POSITION,
 				 UPDATE_ROTATION,
 				 UPDATE_SCALE } from '../actiontypes';
 
 const log = console.log;
 
-
+export const enterVr = () => {	
+	log('@ enterVr')
+	return dispatch => {
+		dispatch({
+			type: ENTER_VR
+		})
+	}
+}
 
 export const updateValue = (data) => {
 	/*

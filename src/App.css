@@ -23,6 +23,10 @@
 	padding: 10px;
 }
 
+.enter-vr-control {
+	float: right;
+}
+
 .controll-group {
 	/*height: 20px;*/
 	color: #393939;

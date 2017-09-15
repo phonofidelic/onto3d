@@ -15,7 +15,10 @@ class ControlsContainer extends Component {
 		const { shapeList } = this.props;
 		return (
 			<div className="controlls-container container">
-				Controlls container
+				<div style={{height: '50px'}}>
+					Controlls container
+					<span className="enter-vr-control"><button type="button" className="btn btn-default" onClick={() => {this.props.enterVr()}}>Enter VR</button></span>
+				</div>
 				{ shapeList.map((shape, i) => {
 					if (shape.selected === true) {
 						return (
@@ -25,7 +28,7 @@ class ControlsContainer extends Component {
 						return null;
 					}
 				})}
-				
+
 			</div>
 		);
 	}
