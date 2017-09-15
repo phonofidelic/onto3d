@@ -23,10 +23,6 @@
 	padding: 10px;
 }
 
-.enter-vr-control {
-	float: right;
-}
-
 .controll-group {
 	/*height: 20px;*/
 	color: #393939;
@@ -34,7 +30,6 @@
 	border-radius: 4px;
 	
 }
-
 
 .controll-group:nth-child(2n) {
 	border-top: 1px solid #727272;
