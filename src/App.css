@@ -3,7 +3,7 @@
 }
 
 .App {
-	background: #727272;
+	background: #393939;
 }
 
 .scene-container{
@@ -17,13 +17,15 @@
 }
 
 .controlls-container {
-	background: #727272;
+	background: #393939;
+	color: #b2b2b2;
 	/*z-index: 1000;*/
 	padding: 10px;
 }
 
 .controll-group {
 	/*height: 20px;*/
+	color: #393939;
 	background: #b2b2b2;
 	border-radius: 4px;
 	

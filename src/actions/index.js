@@ -18,9 +18,9 @@ export const init = () => {
 export const updateValue = (data) => {
 	/*
 	data: {
-		direction: 'inc' || 'dec',
-		controlTypeName: 'Position' || 'Rotation' || 'Scale',
-		dimentionName: 'x' || 'y' || 'z'
+		direction: (One of) 'inc' || 'dec',
+		controlTypeName: (One of) 'Position' || 'Rotation' || 'Scale',
+		dimentionName: (One of) 'x' || 'y' || 'z'
 	}
 	*/
 	log('@ updateValue, \n    id:', data.id,
