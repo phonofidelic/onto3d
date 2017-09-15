@@ -1,5 +1,4 @@
-import { INIT_APP, 
-				 UPDATE_VALUE,
+import { UPDATE_VALUE,
 				 UPDATE_POSITION,
 				 UPDATE_ROTATION,
 				 UPDATE_SCALE } from '../actiontypes';
@@ -24,11 +23,6 @@ const INITIAL_STATE = {
 
 const shapeListReducer = (state = INITIAL_STATE, action) => {
 	switch(action.type) {
-
-		case INIT_APP:
-			return {
-				...state
-			}
 
 		case UPDATE_POSITION:
 			switch(action.dimention) {

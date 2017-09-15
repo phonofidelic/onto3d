@@ -1,19 +1,11 @@
-import { INIT_APP, 
-				 UPDATE_VALUE,
+import { UPDATE_VALUE,
 				 UPDATE_POSITION,
 				 UPDATE_ROTATION,
 				 UPDATE_SCALE } from '../actiontypes';
 
 const log = console.log;
 
-export const init = () => {
-	log('@ init is called')
-	return dispatch => {
-		dispatch({
-			type: INIT_APP
-		})
-	}
-}
+
 
 export const updateValue = (data) => {
 	/*
