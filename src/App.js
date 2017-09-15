@@ -3,13 +3,13 @@ import './App.css';
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 import CanvasContainer from './containers/CanvasContainer';
-import ControllsContainer from './containers/ControllsContainer';
+import ControlsContainer from './containers/ControlsContainer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <ControllsContainer />
+          <ControlsContainer />
           <CanvasContainer />          
       </div>
     );

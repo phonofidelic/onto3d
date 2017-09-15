@@ -29,7 +29,7 @@ class CanvasContainer extends Component {
 const mapStateToProps = state => {
 	log('*** CanvasContainer, state:', state)
 	return {
-		shapeList: state.defaultReducer.shapeList
+		shapeList: state.shapeListReducer.shapeList
 	}
 }
 

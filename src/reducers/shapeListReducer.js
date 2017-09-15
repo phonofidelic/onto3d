@@ -22,7 +22,7 @@ const INITIAL_STATE = {
 	]
 };
 
-const inputReducer = (state = INITIAL_STATE, action) => {
+const shapeListReducer = (state = INITIAL_STATE, action) => {
 	switch(action.type) {
 
 		case INIT_APP:
@@ -416,5 +416,5 @@ const inputReducer = (state = INITIAL_STATE, action) => {
 	}
 }
 
-export default inputReducer;
+export default shapeListReducer;
 

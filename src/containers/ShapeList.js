@@ -30,7 +30,7 @@ class ShapeList extends Component {
 const mapStateToProps = state => {
 	console.log('*** ShapeList, state:', state)
 	return {
-		shapeList: state.defaultReducer.shapeList
+		shapeList: state.shapeListReducer.shapeList
 	}
 }
 
