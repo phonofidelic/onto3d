@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import 'aframe';
 import { Entity, Scene } from 'aframe-react';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
 import ShapeList from './ShapeList';
-const log = console.log;
 
 class CanvasContainer extends Component {
 	render() {
-		const { shapeList } = this.props;
 		return (
 			<Scene className="scene-container" >
 
@@ -26,11 +22,4 @@ class CanvasContainer extends Component {
 	}
 }
 
-const mapStateToProps = state => {
-	log('*** CanvasContainer, state:', state)
-	return {
-		shapeList: state.shapeListReducer.shapeList
-	}
-}
-
-export default connect(mapStateToProps, actions)(CanvasContainer);
+export default CanvasContainer;

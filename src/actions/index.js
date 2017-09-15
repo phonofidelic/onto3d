@@ -1,5 +1,4 @@
-import { UPDATE_VALUE,
-				 UPDATE_POSITION,
+import { UPDATE_POSITION,
 				 UPDATE_ROTATION,
 				 UPDATE_SCALE } from '../actiontypes';
 
@@ -50,6 +49,8 @@ export const updateValue = (data) => {
 					dimention: data.dimentionName
 				})
 				return;
+
+			default: return;
 		}
 	}
 }

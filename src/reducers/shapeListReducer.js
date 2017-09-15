@@ -1,5 +1,4 @@
-import { UPDATE_VALUE,
-				 UPDATE_POSITION,
+import { UPDATE_POSITION,
 				 UPDATE_ROTATION,
 				 UPDATE_SCALE } from '../actiontypes';
 
@@ -59,6 +58,8 @@ const shapeListReducer = (state = INITIAL_STATE, action) => {
 										x: shape.position.x - STEP_UNIT
 									}
 								};
+							} else {
+								return shape;
 							}
 						});
 						return {
@@ -186,6 +187,8 @@ const shapeListReducer = (state = INITIAL_STATE, action) => {
 										x: shape.rotation.x - STEP_UNIT * 10
 									}
 								};
+							} else {
+								return shape;
 							}
 						});
 						return {
@@ -313,6 +316,8 @@ const shapeListReducer = (state = INITIAL_STATE, action) => {
 										x: shape.scale.x - STEP_UNIT
 									}
 								};
+							} else {
+								return shape;
 							}
 						});
 						return {

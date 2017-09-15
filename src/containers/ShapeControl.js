@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
 import ControlGroupContainer from './ControlGroupContainer';
 
 class ShapeControl extends Component {
@@ -29,12 +27,6 @@ class ShapeControl extends Component {
 																handleShapeChange={this.props.handleShapeChange} />
 			</div>
 		);
-	}
-}
-
-const mapStateToProps = state => {
-	return {
-
 	}
 }
 

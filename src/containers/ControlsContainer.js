@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import { TextField } from 'material-ui';
-import { Field, reduxForm } from 'redux-form';
 import ShapeControl from './ShapeControl';
 
-const form = reduxForm({
-	form: 'controllInput'
-});
 
 class ControlsContainer extends Component {
 
@@ -26,6 +21,8 @@ class ControlsContainer extends Component {
 						return (
 							<ShapeControl id={shape.id} shape={shape} handleShapeChange={this.handleShapeChange.bind(this)} key={i} />
 						)
+					} else {
+						return null;
 					}
 				})}
 				
@@ -41,4 +38,4 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(mapStateToProps, actions)(form(ControlsContainer));
+export default connect(mapStateToProps, actions)(ControlsContainer);
