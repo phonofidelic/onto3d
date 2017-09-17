@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import 'aframe';
+// import 'aframe';
 import { Entity, Scene } from 'aframe-react';
 import ShapeList from './ShapeList';
+const AFRAME = require('aframe');
+const GamepadControls = require('aframe-gamepad-controls');
+const ProxyControls = require('aframe-proxy-controls');
 
 class CanvasContainer extends Component {
 
@@ -13,6 +16,16 @@ class CanvasContainer extends Component {
 		// console.log('### vrMode:', this.props.vrMode)
 	}
 
+	handleAxismove(e) {
+		console.log('*** axismove:', e);
+	}
+
+	componentDidMount() {
+		console.log('componentDidMount', AFRAME)
+		AFRAME.registerComponent('gamepad-controls', GamepadControls);
+		AFRAME.registerComponent('proxy-controls', ProxyControls);
+	}
+
 	render() {
 		return (
 			<Scene id="scene" 
@@ -20,16 +33,25 @@ class CanvasContainer extends Component {
 						 events={{
 						 	'enter-vr': this.handleEnterVr.bind(this),
 						 	'exit-vr': this.handleEnterVr.bind(this)
-						 }} >
+						 }}
+						 proxy-controls="
+						 	enabled: true;
+	            debug: true;
+	            pairCode: 'bajs-korv';
+	            enableOverlay: false" >
 
-			            <Entity primitive="a-sky" color="#393939" />
-			            <Entity primitive="a-cylinder" color="#CCC" rotation="0" position="0 -5 0" radius="30" height="0.1" />
-			            <Entity primitive="a-light" type="point" position="0 3 0" />
+        <Entity primitive="a-sky" color="#393939" />
+        <Entity primitive="a-cylinder" color="#CCC" rotation="0" position="0 -5 0" radius="30" height="0.1" />
+        <Entity primitive="a-light" type="point" position="0 3 0" />
 
-			            <Entity id="camera"
-			                    primitive="a-camera" />
+        <Entity id="camera"
+                primitive="a-camera"
+                gamepad-controls
+                events={{
+                	'axismove': this.handleAxismove
+                }} />
 
-			            <ShapeList />
+        <ShapeList />
 
 	    </Scene>
 		);
