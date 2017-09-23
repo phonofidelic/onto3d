@@ -8,6 +8,7 @@
   "dependencies": {
     "aframe": "^0.6.1",
     "aframe-gamepad-controls": "^0.6.0",
+    "aframe-look-at-component": "^0.6.0",
     "aframe-proxy-controls": "^0.6.0",
     "aframe-react": "^4.3.0",
     "material-ui": "^0.19.0",

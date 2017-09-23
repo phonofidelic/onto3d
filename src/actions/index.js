@@ -1,15 +1,23 @@
-import { ENTER_VR,
+import { TOGGLE_VR,
 				 UPDATE_POSITION,
 				 UPDATE_ROTATION,
-				 UPDATE_SCALE } from '../actiontypes';
+				 UPDATE_SCALE,
+				 TOGGLE_HUD } from '../actiontypes';
 
 const log = console.log;
 
-export const enterVr = () => {	
-	log('@ enterVr')
+export const toggleVr = (vrMode) => {	
+	log('@ toggleVr')
+
+	if (!vrMode) {
+		document.querySelector('#scene').enterVR();
+	} else {
+		document.querySelector('#scene').exitVR();
+	}
+
 	return dispatch => {
 		dispatch({
-			type: ENTER_VR
+			type: TOGGLE_VR
 		})
 	}
 }
@@ -60,5 +68,15 @@ export const updateValue = (data) => {
 
 			default: return;
 		}
+	}
+}
+
+export const toggleHud = () => {
+	log('@ toggleHud')
+
+	return dispatch => {
+		dispatch({
+			type: TOGGLE_HUD
+		})
 	}
 }

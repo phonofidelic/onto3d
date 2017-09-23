@@ -39,7 +39,7 @@ class ControlsContainer extends Component {
 }
 
 const mapStateToProps = state => {
-	console.log('ControlsContainer, state:', state)
+	// console.log('ControlsContainer, state:', state)
 	return {
 		shapeList: state.shapeListReducer.shapeList,
 		vrMode: state.sceneReducer.vrMode
